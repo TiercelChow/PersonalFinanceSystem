@@ -11,7 +11,7 @@ body {
 	font-size: 14px;
 	overflow-x: hidden;
     background-color: #f5f6fa;
-    background-image: url("../../images/userbackground.jpg");/*spark is fun*/
+    background-image: url("../../images/loginbackground.jpg");/*spark is fun*/
     background-repeat: no-repeat;
     background-size: cover;
 }
