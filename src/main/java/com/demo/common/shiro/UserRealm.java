@@ -17,9 +17,7 @@ import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 
@@ -62,7 +60,7 @@ public class UserRealm extends AuthorizingRealm {
                 info.addStringPermission(up.getPermission());
             }
         }
-        //info.addStringPermission(currentUser.getPrams());
+
 
         return info;
     }
