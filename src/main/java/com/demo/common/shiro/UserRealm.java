@@ -44,6 +44,10 @@ public class UserRealm extends AuthorizingRealm {
         String currentUserUsername = (String) subject.getPrincipal();
         User user = loginService.selectUserByUsername(currentUserUsername);
         if (user!=null){
+            if (user.getStatus() == 0) {
+                subject.logout();
+                return info;
+            }
             info.addRole("user");
             List<Permissions> list = permissionsService.selectUserPermissionsByUserId(1);
             for (Permissions up:list) {
