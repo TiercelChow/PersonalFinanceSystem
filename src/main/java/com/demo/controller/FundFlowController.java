@@ -19,7 +19,7 @@ public class FundFlowController {
     @Autowired
     private FundFlowService fundFlowService;
 
-
+//资金记录界面
     @RequestMapping("/user/record")
     public String  selectFundFlowAll(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                      @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,

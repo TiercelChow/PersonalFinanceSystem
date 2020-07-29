@@ -22,7 +22,7 @@ public class UserCredController {
     @Autowired
     private UserCredService userCredService;
 
-
+//用户信誉界面
     @RequestMapping("/reputation")
     public String  selectUserAll(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                  @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,

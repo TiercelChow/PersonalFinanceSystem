@@ -26,7 +26,7 @@ public class LoanController {
     private LoanService loanService;
     @Autowired
     private InfoService infoService;
-
+//网贷审核界面
     @RequestMapping("/loanexam")
     public String  selectUserAllExam(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                      @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,

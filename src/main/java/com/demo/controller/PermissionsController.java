@@ -20,7 +20,7 @@ public class PermissionsController {
     @Autowired
     private PermissionsService permissionsService;
 
-
+//管理员权限管理界面
     @RequestMapping("/adminpermissions")
     public String SelectAdminPermission(Map<String,Object> top,
                                         Model model) {

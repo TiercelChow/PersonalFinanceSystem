@@ -19,7 +19,7 @@ import java.util.Map;
 public class UserPayController {
     @Autowired
     private PayService payService;
-
+//工资理财界面
     @RequestMapping("/userpay")
     public String  selectUserAll(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                  @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,

@@ -28,7 +28,7 @@ public class UserController {
     @Autowired
     private LoginService loginService;
 
-
+    //用户信息界面
     @RequestMapping("/userlist")
     public String  selectUserAll(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                  @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,

@@ -19,7 +19,7 @@ public class NewController {
     @Autowired
     private NewService newService;
 
-
+//系统首页
     @RequestMapping("/new")
     public String  selectUserAll(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                  @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,

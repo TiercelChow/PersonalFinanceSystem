@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class RegisterController {
     @Autowired
     private RegisterService registerService;
-
+    //注册界面
     @RequestMapping("/register")
     public String reg(){
         return "register";

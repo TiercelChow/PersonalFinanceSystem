@@ -21,7 +21,7 @@ import java.util.Map;
 public class BankController {
     @Autowired
     private BankService bankService;
-
+//推荐银行管理界面
     @RequestMapping("/bank")
     public String  selectUserAll(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                  @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,

@@ -20,8 +20,8 @@ import java.util.Map;
 public class AdminHeadController {
     @Autowired
     private UserService userService;
-
-    @RequestMapping("/adminhead")
+    //管理员首页
+ @RequestMapping("/adminhead")
     public String selectUserAll(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                 @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,
                                 Model model,Map<String,Object> top)
@@ -41,6 +41,9 @@ public class AdminHeadController {
 
         return "/admin/main";
     }
+
+
+    //强制下线
     @RequestMapping("/admin/updateUserStatus/{id}")
     @ResponseBody
     public Msg updateUserStatus(@PathVariable("id") Integer id, User user) {

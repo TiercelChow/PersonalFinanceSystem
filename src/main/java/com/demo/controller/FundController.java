@@ -22,7 +22,7 @@ import java.util.Map;
 public class FundController {
     @Autowired
     private FundService fundService;
-
+//基金理财管理界面
     @RequestMapping("/fund")
     public String  selectUserAll(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                  @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,

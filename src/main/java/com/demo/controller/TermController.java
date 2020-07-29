@@ -22,7 +22,7 @@ import java.util.Map;
 public class TermController {
     @Autowired
     private TermService termService;
-
+//期限理财管理界面
     @RequestMapping("/term")
     public String  selectUserAll(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                  @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,

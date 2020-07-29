@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 public class LoginController {
     @Autowired
     private LoginService loginService;
-
+    //登录界面
     @RequestMapping("/login/loginVerifyUsername/{username}")
     @ResponseBody
     public Msg loginUsername(@PathVariable("username")String username, HttpServletRequest request){

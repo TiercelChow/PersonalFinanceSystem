@@ -19,7 +19,7 @@ public class ProfileController {
     @Autowired
     private UserService userService;
     private InfoService infoService;
-
+//个人信息界面
     @RequestMapping("/user/personal/profile")
     public String selectProfile(Model model, HttpServletRequest request, Map<String,Object> top){
         Integer profileId=(Integer)request.getSession().getAttribute("loginUser");

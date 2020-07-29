@@ -23,7 +23,7 @@ public class BankCardController {
     @Autowired
     private BankCardService bankCardService;
 
-
+//银行卡管理界面
     @RequestMapping("/bankcardlist")
     public String  selectUserAll(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                  @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,

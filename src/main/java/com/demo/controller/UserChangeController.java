@@ -21,7 +21,7 @@ public class UserChangeController {
     @Autowired
     private ChangeService changeService;
 
-
+//零钱理财界面
     @RequestMapping("/userchange")
     public String  selectUserAll(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                  @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,

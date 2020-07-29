@@ -22,7 +22,7 @@ public class InfoController {
     @Autowired
     private InfoService infoService;
 
-
+    //我的消息界面
     @RequestMapping("/user/personal/myinfo")
     public String  selectInfoById(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                   @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,

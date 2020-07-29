@@ -22,7 +22,7 @@ public class MyFinanceController {
     @Autowired
     private MyFinanceService myFinanceService;
 
-
+    //我的理财界面
     @RequestMapping("/myfinance")
     public String myFinance(Model model, HttpServletRequest request, Map<String,Object> top){
         Integer userId=(Integer) request.getSession().getAttribute("loginUser");
