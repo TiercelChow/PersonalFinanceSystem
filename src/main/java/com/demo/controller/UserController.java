@@ -53,7 +53,7 @@ public class UserController {
 
         return "userinfo";
     }
-    @RequestMapping("/user/addUser")
+    @RequestMapping("/admin/addUser")
     @ResponseBody
     public Msg insertUser(User user){
         int i=userService.addUser(user);
@@ -63,7 +63,7 @@ public class UserController {
             return Msg.fail();
         }
     }
-    @RequestMapping("/user/getUserById/{id}")
+    @RequestMapping("/admin/getUserById/{id}")
     @ResponseBody
     public Msg getUserInfoById(@PathVariable("id") Integer id){
         User user=userService.selectUserById(id);
@@ -71,7 +71,19 @@ public class UserController {
 
     }
 
-    @RequestMapping("/user/deleteUserById/{id}")
+    @RequestMapping("/admin/updateUserProfile/{id}")
+    @ResponseBody
+    public Msg updateUserProfile(@PathVariable("id") Integer id, User user) {
+        user.setId(id);
+        int i=userService.updateUser(user);
+        if(i==1){
+            return Msg.success();
+        }else {
+            return Msg.fail();
+        }
+    }
+
+    @RequestMapping("/admin/deleteUserById/{id}")
     @ResponseBody
 
     public Msg deleteUserById(@PathVariable("id") Integer id, User user){

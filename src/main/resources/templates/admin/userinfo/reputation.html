@@ -233,7 +233,7 @@
     //根据id查出用户信息并显示
     function getUserInfo(id) {
         $.ajax({
-            url: "/user/getUserById/" + id,
+            url: "/admin/getUserById/" + id,
             type: "GET",
             success: function (result) {
                 var user = result.extend.user;
@@ -264,7 +264,7 @@
 
         //2、发送ajax请求保存更新的员工信誉数据
         $.ajax({
-            url: "/user/updateUserCred/" + $(this).attr("update-id"),
+            url: "/admin/updateUserCred/" + $(this).attr("update-id"),
             type: "PUT",
             data: $("#userUpdateModal form").serialize(),
             success: function (result) {

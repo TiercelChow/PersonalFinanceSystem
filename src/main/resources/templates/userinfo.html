@@ -418,7 +418,7 @@
         }
         //2、发送ajax请求保存用户
         $.ajax({
-            url: "/user/addUser",
+            url: "/admin/addUser",
             type: "POST",
             data: $("#userAddModal form").serialize(),
             success: function (result) {
@@ -454,7 +454,7 @@
     //根据id查出用户信息并显示
     function getUserInfo(id) {
         $.ajax({
-            url: "/user/getUserById/" + id,
+            url: "/admin/getUserById/" + id,
             type: "GET",
             success: function (result) {
                 var user = result.extend.user;
@@ -520,7 +520,7 @@
         }
         //2、发送ajax请求保存更新的员工数据
         $.ajax({
-            url: "/user/updateUserProfile/" +
+            url: "/admin/updateUserProfile/" +
                 "" + $(this).attr("update-id"),
             type: "PUT",
             data: $("#userUpdateModal form").serialize(),
@@ -554,7 +554,7 @@
                     btnClass: 'btn-primary',
                     action: function () {
                         $.ajax({
-                            url: "/user/deleteUserById/" + id,
+                            url: "/admin/deleteUserById/" + id,
                             type: "DELETE",
                             success: function (result) {
                                 if (result.code === 100) {

@@ -49,7 +49,7 @@ public class UserCredController {
     }
 
 
-    @RequestMapping("/user/updateUserCred/{id}")
+    @RequestMapping("/admin/updateUserCred/{id}")
     @ResponseBody
     public Msg updateUserCredProfile(@PathVariable("id") Integer id,UserCred userCred) {
         userCred.setId(id);

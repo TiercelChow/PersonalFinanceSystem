@@ -48,13 +48,13 @@ public class BankCardController {
 
         return "/admin/userinfo/bankcard";
     }
-    @RequestMapping("/user/getBankCardById/{id}")
+    @RequestMapping("/admin/getBankCardById/{id}")
     @ResponseBody
     public Msg selectUserById(@PathVariable("id") Integer id){
         BankCard bankCard = bankCardService.selectGetBankCardById(id);
         return Msg.success().add("bankcard",bankCard);
     }
-    @RequestMapping("/user/updateBankCard/{id}")
+    @RequestMapping("/admin/updateBankCard/{id}")
     @ResponseBody
     public Msg updateBankCard(@PathVariable("id") Integer id, BankCard bankCard) {
         bankCard.setId(id);
@@ -66,7 +66,7 @@ public class BankCardController {
         }
     }
 
-    @RequestMapping("/user/deleteBankCard/{id}")
+    @RequestMapping("/admin/deleteBankCard/{id}")
     @ResponseBody
 
     public Msg deleteBankCard(@PathVariable("id") Integer id, BankCard bankCard){
@@ -106,6 +106,7 @@ public class BankCardController {
     @ResponseBody
     public Msg insertBankCard(BankCard bankCard, HttpServletRequest request){
         Integer userId=(Integer) request.getSession().getAttribute("loginUser");
+        bankCard.setUserId(userId);
         int i=bankCardService.insertBankCard(bankCard);
         if(i==1){
             return Msg.success();

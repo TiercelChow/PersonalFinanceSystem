@@ -268,7 +268,7 @@
     //根据id查出用户信息并显示
     function getBankcardInfo(id) {
         $.ajax({
-            url: "/user/getBankCardById/" + id,
+            url: "/admin/getBankCardById/" + id,
             type: "GET",
             success: function (result) {
                 var bankcard = result.extend.bankcard;
@@ -320,7 +320,7 @@
 
         //2、发送ajax请求保存更新的银行卡数据
         $.ajax({
-            url: "/user/updateBankCard/" +""+ $(this).attr("update-id"),
+            url: "/admin/updateBankCard/" +""+ $(this).attr("update-id"),
             type: "PUT",
             data: $("#bankcardUpdateModal form").serialize(),
             success: function (result) {
@@ -353,7 +353,7 @@
                     btnClass: 'btn-primary',
                     action: function () {
                         $.ajax({
-                            url: "/user/deleteBankCard/" + id,
+                            url: "/admin/deleteBankCard/" + id,
                             type: "DELETE",
                             success: function (result) {
                                 if (result.code === 100) {

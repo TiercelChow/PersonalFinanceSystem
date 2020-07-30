@@ -22,7 +22,7 @@ public interface BankCardMapper {
     @Select("SELECT id,cardBank,type,cardNum FROM bankcard WHERE userId=#{userId}")
     public List<BankCard> selectBankCardById(Integer userId);
 
-    @Insert("insert into bankcard (cardBank,type,cardNum,userId)values(#{cardBank},#{type},#{cardNum},1)")
+    @Insert("insert into bankcard (cardBank,type,cardNum,userId)values(#{cardBank},#{type},#{cardNum},#{userId})")
     public int insertBankCard(BankCard bankCard);
 
     @Select("SELECT cardBank,type,cardNum FROM bankcard WHERE id = #{id}")
