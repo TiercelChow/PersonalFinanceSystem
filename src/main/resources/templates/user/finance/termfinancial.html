@@ -56,7 +56,7 @@
                                             <td th:text="${tf.invesTerm}"></td>
                                             <td>
                                                 <button class="btn btn-primary btn-sm buy_btn"
-                                                        th:attr="buyBtnId=${tf.id},buyBtnName=${tf.name},buyBtnIncome=${tf.annualIncome}">
+                                                        th:attr="buyBtnId=${tf.id},buyBtnName=${tf.name},buyBtnIncome=${tf.annualIncome},buyBtnMoney=${tf.leastMoney}">
 															<span class="glyphicon glyphicon-usd"
                                                                   aria-hidden="true"></span> 投资
                                                 </button>
@@ -96,6 +96,8 @@
         var userId = [[${session.loginUser}]];
         var averyield=$(this).attr("buyBtnIncome");
         //alert(userId);
+        var leastMoney=$(this).attr("buyBtnMoney");
+        var termname="无";
         var name = $(this).attr("buyBtnName");
         var profit;
         if(termFinancialId==1){
@@ -118,7 +120,10 @@
                                 "termFinancialId":termFinancialId,
                                 "userId":userId,
                                 "profit":profit,
-                                "averyield":averyield
+                                "averyield":averyield,
+                                "name":name,
+                                "leastmoney":leastMoney,
+                                "termname":termname
                             },
                             success : function(result) {
                                 if (result.code===100){

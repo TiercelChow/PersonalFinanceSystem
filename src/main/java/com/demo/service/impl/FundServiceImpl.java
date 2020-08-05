@@ -44,4 +44,9 @@ public class FundServiceImpl implements FundService {
     public int addFundMoney(UserFund userFund) {
         return fundMapper.addFundMoney(userFund);
     }
+
+    @Override
+    public int insertFlowOfFund(UserFund userFund) {
+        return fundMapper.insertFlowOfFund(userFund);
+    }
 }

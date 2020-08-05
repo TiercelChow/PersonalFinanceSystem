@@ -44,4 +44,9 @@ public class TermServiceImpl implements TermService {
     public int addTermMoney(UserTerm userTerm) {
         return termMapper.addTermMoney(userTerm);
     }
+
+    @Override
+    public int insertFlowOfFund(UserTerm userTerm) {
+        return termMapper.insertFlowOfFund(userTerm);
+    }
 }

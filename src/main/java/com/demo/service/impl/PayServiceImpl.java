@@ -43,4 +43,9 @@ public class PayServiceImpl implements PayService {
     public int addPayMoney(Pay pay) {
         return payMapper.addPayMoney(pay);
     }
+
+    @Override
+    public int insertFlowOfFund(Pay pay) {
+        return payMapper.insertFlowOfFund(pay);
+    }
 }

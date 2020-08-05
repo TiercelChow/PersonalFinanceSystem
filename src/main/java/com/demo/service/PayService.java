@@ -16,4 +16,6 @@ public interface PayService {
     public int deletePayById(Pay pay);
 
     public int addPayMoney(Pay pay);
+
+    public  int insertFlowOfFund(Pay pay);
 }

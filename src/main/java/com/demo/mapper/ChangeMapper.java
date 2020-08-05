@@ -25,4 +25,7 @@ public interface ChangeMapper {
 
     @Insert("insert into user_change_money (userId,changeId,startTime,averYield,profit,status)values(#{userId},#{changeMoneyId},CURDATE(),#{annualIncome},#{profit},1)")
     public int addChangeMoney(Change change);
+
+    @Insert("insert into flow_of_funds (userId,flowMoney,type,source,fundDesc,createTime) values(#{userId},#{invesMoney},1,#{name},#{fundDesc},CURDATE())")
+    public  int insertFlowOfFund(Change change);
 }

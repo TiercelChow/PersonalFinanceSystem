@@ -9,6 +9,8 @@ public class Pay {
     private Integer userId;
     private Integer payMoneyId;
     private Double profit;
+    private String payname;
+    private String name;
 
     public Double getProfit() {
         return profit;
@@ -78,6 +80,22 @@ public class Pay {
         this.invesTerm = invesTerm;
     }
 
+    public String getPayname() {
+        return payname;
+    }
+
+    public void setPayname(String payname) {
+        this.payname = payname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "Pay{" +
@@ -89,6 +107,8 @@ public class Pay {
                 ", userId=" + userId +
                 ", payMoneyId=" + payMoneyId +
                 ", profit=" + profit +
+                ", payname='" + payname + '\'' +
+                ", name='" + name + '\'' +
                 '}';
     }
 

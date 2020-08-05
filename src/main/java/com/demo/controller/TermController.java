@@ -107,8 +107,9 @@ public class TermController {
     @RequestMapping("/user/buyTermFinancial")
     @ResponseBody
     public Msg insertTermMoney(UserTerm userTerm){
+        int j=termService.insertFlowOfFund(userTerm);
         int i=termService.addTermMoney(userTerm);
-        if(i==1){
+        if(i==1&&j==1){
             return Msg.success();
         }else {
             return Msg.fail();

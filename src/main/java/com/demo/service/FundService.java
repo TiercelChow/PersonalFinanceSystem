@@ -12,5 +12,5 @@ public interface FundService {
     public int  updateFund(Fund fund);
     public int deleteFundById(Fund fund);
     public int addFundMoney(UserFund userFund);
-
+    public  int insertFlowOfFund(UserFund userFund);
 }

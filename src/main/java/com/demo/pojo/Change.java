@@ -9,6 +9,8 @@ public class Change {
     private String invesMoney;
     private Integer userId;
     private Integer changeMoneyId;
+    private String fundDesc;
+    private Double profit;
 
     public Double getProfit() {
         return profit;
@@ -18,7 +20,6 @@ public class Change {
         this.profit = profit;
     }
 
-    private Double profit;
 
 
 
@@ -87,6 +88,14 @@ public class Change {
         this.invesTerm = invesTerm;
     }
 
+    public String getFundDesc() {
+        return fundDesc;
+    }
+
+    public void setFundDesc(String fundDesc) {
+        this.fundDesc = fundDesc;
+    }
+
     @Override
     public String toString() {
         return "Change{" +
@@ -98,6 +107,7 @@ public class Change {
                 ", invesMoney='" + invesMoney + '\'' +
                 ", userId=" + userId +
                 ", changeMoneyId=" + changeMoneyId +
+                ", fundDesc='" + fundDesc + '\'' +
                 ", profit=" + profit +
                 '}';
     }

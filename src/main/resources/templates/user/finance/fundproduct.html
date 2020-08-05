@@ -63,7 +63,7 @@
                                             <td th:text="${fp.investerm}"></td>
                                             <td>
                                                 <button class="btn btn-primary btn-sm buy_btn"
-                                                        th:attr="buyBtnId=${fp.id},buyBtnName=${fp.funddesc},buyBtnGrowth=${fp.monthlygrowth}">
+                                                        th:attr="buyBtnId=${fp.id},buyBtnName=${fp.funddesc},buyBtnGrowth=${fp.monthlygrowth},buyBtnMoney=${fp.leastmoney}">
 															<span class="glyphicon glyphicon-usd"
                                                                   aria-hidden="true"></span> 投资
                                                 </button>
@@ -103,6 +103,8 @@
         var userId = [[${session.loginUser}]];
         var averyield=$(this).attr("buyBtnGrowth");
         //alert(userId);
+        var fundname="无";
+        var leastmoney= $(this).attr("buyBtnMoney");
         var name = $(this).attr("buyBtnName");
         var profit;
         if(fundProductId==1){
@@ -125,7 +127,10 @@
                                 "fundProductId":fundProductId,
                                 "userId":userId,
                                 "averyield":averyield,
-                                "profit":profit
+                                "profit":profit,
+                                "fundname":fundname,
+                                "leastmoney":leastmoney,
+                                "name":name
                             },
                             success : function(result) {
                                 if (result.code===100){

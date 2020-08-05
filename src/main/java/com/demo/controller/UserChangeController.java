@@ -46,8 +46,9 @@ public class UserChangeController {
     @RequestMapping("/user/buyChangeMoney")
     @ResponseBody
     public Msg insertChangeMoney(Change change){
+        int j=changeService.insertFlowOfFund(change);
         int i=changeService.addChangeMoney(change);
-        if(i==1){
+        if(i==1&&j==1){
             return Msg.success();
         }else {
             return Msg.fail();

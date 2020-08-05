@@ -11,6 +11,10 @@ public class UserTerm {
     private Double profit;
     private Double averyield;
     private Integer userTermFinancialId;
+    private Integer status;
+    private Integer userId;
+    private Integer termFinancialId;
+    private String termname;
 
     public Integer getUserTermFinancialId() {
         return userTermFinancialId;
@@ -35,12 +39,6 @@ public class UserTerm {
     public Integer getStatus() {
         return status;
     }
-
-    private Integer status;
-    private Integer userId;
-    private Integer termFinancialId;
-
-
 
     public Integer getId() {
         return id;
@@ -106,6 +104,14 @@ public class UserTerm {
         this.termFinancialId = termFinancialId;
     }
 
+    public String getTermname() {
+        return termname;
+    }
+
+    public void setTermname(String termname) {
+        this.termname = termname;
+    }
+
     @Override
     public String toString() {
         return "UserTerm{" +
@@ -120,6 +126,7 @@ public class UserTerm {
                 ", status=" + status +
                 ", userId=" + userId +
                 ", termFinancialId=" + termFinancialId +
+                ", termname='" + termname + '\'' +
                 '}';
     }
 

@@ -26,4 +26,7 @@ public interface TermMapper {
 
     @Insert("insert into user_term_financial (userId,termId,startTime,averYield,profit,status)values(#{userId},#{termFinancialId},CURDATE(),#{averyield},#{profit},1)")
     public int addTermMoney(UserTerm userTerm);
+
+    @Insert("insert into flow_of_funds (userId,flowMoney,type,source,fundDesc,createTime) values(#{userId},#{leastmoney},1,#{name},#{termname},CURDATE())")
+    public  int insertFlowOfFund(UserTerm userTerm);
 }

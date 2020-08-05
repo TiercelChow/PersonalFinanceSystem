@@ -39,9 +39,13 @@ public class ChangeServiceImpl implements ChangeService {
         return changeMapper.deleteChangeById(change);
     }
 
-
     @Override
     public int addChangeMoney(Change change) {
         return changeMapper.addChangeMoney(change);
+    }
+
+    @Override
+    public int insertFlowOfFund(Change change) {
+        return changeMapper.insertFlowOfFund(change);
     }
 }

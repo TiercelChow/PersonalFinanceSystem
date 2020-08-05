@@ -106,8 +106,9 @@ public class FundController {
     @RequestMapping("/user/buyFundProduct")
     @ResponseBody
     public Msg insertFundMoney(UserFund userFund){
+        int j=fundService.insertFlowOfFund(userFund);
         int i=fundService.addFundMoney(userFund);
-        if(i==1){
+        if(i==1&&j==1){
             return Msg.success();
         }else {
             return Msg.fail();

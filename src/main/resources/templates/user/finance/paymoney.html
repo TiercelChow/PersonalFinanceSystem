@@ -54,7 +54,7 @@
                                             <td th:text="${pm.invesTerm}"></td>
                                             <td>
                                                 <button class="btn btn-primary btn-sm buy_btn"
-                                                        th:attr="buyBtnId=${pm.id},buyBtnName=${pm.type}">
+                                                        th:attr="buyBtnId=${pm.id},buyBtnName=${pm.type},buyBtnMoney=${pm.monthMoney}">
 															<span class="glyphicon glyphicon-usd"
                                                                   aria-hidden="true"></span> 投资
                                                 </button>
@@ -93,6 +93,8 @@
         var payMoneyId = $(this).attr("buyBtnId");
         var userId = [[${session.loginUser}]];
         //alert(userId);
+        var monthMoney= $(this).attr("buyBtnMoney");
+        var payname="工资理财";
         var type = $(this).attr("buyBtnName");
         var name;
         if (type==1){
@@ -122,7 +124,10 @@
                             data : {
                                 "payMoneyId":payMoneyId,
                                 "userId":userId,
-                                "profit":profit
+                                "profit":profit,
+                                "name":name,
+                                "monthMoney":monthMoney,
+                                "payname":payname
                             },
                             success : function(result) {
                                 if (result.code===100){

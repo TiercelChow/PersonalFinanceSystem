@@ -45,8 +45,9 @@ public class UserPayController {
     @RequestMapping("/user/buyPayMoney")
     @ResponseBody
     public Msg insertPayMoney(Pay pay){
+        int j=payService.insertFlowOfFund(pay);
         int i=payService.addPayMoney(pay);
-        if(i==1){
+        if(i==1&&j==1){
             return Msg.success();
         }else {
             return Msg.fail();

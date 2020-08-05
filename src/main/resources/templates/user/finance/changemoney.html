@@ -56,7 +56,7 @@
                                             <td th:text="${cm.invesMoney}+'元'"></td>
                                             <td>
                                                 <button class="btn btn-primary btn-sm buy_btn"
-                                                        th:attr="buyBtnId=${cm.id},buyBtnName=${cm.name},buyBtnIncome=${cm.annualIncome}">
+                                                        th:attr="buyBtnId=${cm.id},buyBtnName=${cm.name},buyBtnIncome=${cm.annualIncome},buyBtnMoney=${cm.invesMoney}">
 															<span class="glyphicon glyphicon-usd"
                                                                   aria-hidden="true"></span> 投资
                                                 </button>
@@ -93,11 +93,12 @@
 <script th:inline="javascript">
     $(document).on("click",".buy_btn",function () {
         var changeMoneyId = $(this).attr("buyBtnId");
+        var invesMoney= $(this).attr("buyBtnMoney");
 
         var userId = [[${session.loginUser}]];
         //alert(userId);
         var annualIncome=$(this).attr("buyBtnIncome");
-
+        var fundDesc="无";
         var name = $(this).attr("buyBtnName");
         var profit;
         if(changeMoneyId==1){
@@ -125,7 +126,10 @@
                                 "changeMoneyId":changeMoneyId,
                                 "userId":userId,
                                 "annualIncome":annualIncome,
-                                "profit":profit
+                                "profit":profit,
+                                "invesMoney":invesMoney,
+                                "name":name,
+                                "fundDesc":fundDesc
                             },
                             success : function(result) {
                                 if (result.code===100){

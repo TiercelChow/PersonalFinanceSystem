@@ -26,4 +26,7 @@ public interface FundMapper {
 
     @Insert("insert into user_fund_product (userId,fundId,startTime,averYield,profit,status)values(#{userId},#{fundProductId},CURDATE(),#{averyield},#{profit},1)")
     public int addFundMoney(UserFund userFund);
+
+    @Insert("insert into flow_of_funds (userId,flowMoney,type,source,fundDesc,createTime) values(#{userId},#{leastmoney},1,#{name},#{fundname},CURDATE())")
+    public  int insertFlowOfFund(UserFund userFund);
 }

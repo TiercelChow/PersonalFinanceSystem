@@ -25,4 +25,7 @@ public interface PayMapper {
 
     @Insert("insert into user_pay_money (userId,payId,startTime,averYield,profit,status)values(#{userId},#{payMoneyId},CURDATE(),0.031223000,#{profit},1)")
     public int addPayMoney(Pay pay);
+
+    @Insert("insert into flow_of_funds (userId,flowMoney,type,source,fundDesc,createTime) values(#{userId},#{monthMoney},1,#{payname},#{name},CURDATE())")
+    public  int insertFlowOfFund(Pay pay);
 }

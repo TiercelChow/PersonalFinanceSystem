@@ -14,6 +14,8 @@ public class UserFund {
     private Integer userId;
     private Integer fundProductId;
     private Integer userFundProductId;
+    private String name;
+    private String fundname;
 
     public Integer getUserFundProductId() {
         return userFundProductId;
@@ -103,6 +105,22 @@ public class UserFund {
         this.status = status;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getFundname() {
+        return fundname;
+    }
+
+    public void setFundname(String fundname) {
+        this.fundname = fundname;
+    }
+
     @Override
     public String toString() {
         return "UserFund{" +
@@ -117,6 +135,8 @@ public class UserFund {
                 ", userId=" + userId +
                 ", fundProductId=" + fundProductId +
                 ", userFundProductId=" + userFundProductId +
+                ", name='" + name + '\'' +
+                ", fundname='" + fundname + '\'' +
                 '}';
     }
 

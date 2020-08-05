@@ -13,4 +13,5 @@ public interface TermService {
     public int  updateTerm(Term term);
     public int deleteTermById(Term term);
     public int addTermMoney(UserTerm userTerm);
+    public  int insertFlowOfFund(UserTerm userTerm);
 }

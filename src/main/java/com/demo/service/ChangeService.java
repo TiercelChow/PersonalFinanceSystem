@@ -17,4 +17,5 @@ public interface ChangeService {
 
     public int addChangeMoney(Change change);
 
+    public  int insertFlowOfFund(Change change);
 }
